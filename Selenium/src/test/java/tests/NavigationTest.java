@@ -40,40 +40,40 @@ public class NavigationTest {
 		
 		IndexPage indexPage = PageFactory.initElements(driver, IndexPage.class);
 		indexPage.clickFreezerApp();
-		assertEquals(driver.getCurrentUrl(),Constants.ip+"/index.html");
+		assertEquals(driver.getCurrentUrl(),"http://localhost/index.html");
 		indexPage.clickHome();
-		assertEquals(driver.getCurrentUrl(),Constants.ip+"/index.html");
+		assertEquals(driver.getCurrentUrl(),"http://localhost/index.html");
 		indexPage.clickGitHub();
 		assertEquals(driver.getCurrentUrl(),"https://github.com/RebekahZoe/FreezerApplication");
 		this.driver.get(Constants.ip);
 		indexPage.clickFreezers();
-		assertEquals(driver.getCurrentUrl(),Constants.ip+"/Freezer.html");
+		assertEquals(driver.getCurrentUrl(),"http://localhost/Freezer.html");
 		
 		FreezerPage freezerPage = PageFactory.initElements(driver, FreezerPage.class);
 		freezerPage.clickFreezerApp();
-		assertEquals(driver.getCurrentUrl(),Constants.ip+"/index.html");
-		this.driver.get(Constants.ip+"/Freezer.html");
+		assertEquals(driver.getCurrentUrl(),"http://localhost/index.html");
+		this.driver.get("http://localhost/Freezer.html");
 		freezerPage.clickHome();
-		assertEquals(driver.getCurrentUrl(),"/index.html");
-		this.driver.get(Constants.ip+"/Freezer.html");
+		assertEquals(driver.getCurrentUrl(),"http://localhost/index.html");
+		this.driver.get("http://localhost/Freezer.html");
 		freezerPage.clickGitHub();
 		assertEquals(driver.getCurrentUrl(),"https://github.com/RebekahZoe/FreezerApplication");
-		this.driver.get(Constants.ip+"Freezer.html");
+		this.driver.get("http://localhost/Freezer.html");
 		freezerPage.clickFreezers();
-		assertEquals(driver.getCurrentUrl(),Constants.ip+"/Freezer.html");
+		assertEquals(driver.getCurrentUrl(),"http://localhost/Freezer.html");
 		
 		IndividualFreezerPage individualFreezerPage = PageFactory.initElements(driver, IndividualFreezerPage.class);
 		individualFreezerPage.clickFreezerApp();
-		assertEquals(driver.getCurrentUrl(),Constants.ip+"/index.html");
-		this.driver.get(Constants.ip+"/IndividualFreezer.html");
+		assertEquals(driver.getCurrentUrl(),"http://localhost/index.html");
+		this.driver.get("http://localhost/IndividualFreezer.html");
 		individualFreezerPage.clickHome();
-		assertEquals(driver.getCurrentUrl(),"/index.html");
-		this.driver.get(Constants.ip+"/IndividualFreezer.html");
+		assertEquals(driver.getCurrentUrl(),"http://localhost/index.html");
+		this.driver.get("http://localhost/IndividualFreezer.html");
 		individualFreezerPage.clickGitHub();
 		assertEquals(driver.getCurrentUrl(),"https://github.com/RebekahZoe/FreezerApplication");
-		this.driver.get(Constants.ip+"/IndividualFreezer.html");
+		this.driver.get("http://localhost/IndividualFreezer.html");
 		individualFreezerPage.clickFreezers();
-		assertEquals(driver.getCurrentUrl(),Constants.ip+"/Freezer.html");
+		assertEquals(driver.getCurrentUrl(),"http://localhost/Freezer.html");
 		
 	}
 	
