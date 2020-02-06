@@ -35,45 +35,45 @@ public class NavigationTest {
 	@Test
 	public void test() throws InterruptedException {
 		this.driver.manage().window().setSize(new Dimension(1600,700));
-		this.driver.get(Constants.ip+"/FreezerApplication/");
+		this.driver.get(Constants.ip);
 		Thread.sleep(1000);
 		
 		IndexPage indexPage = PageFactory.initElements(driver, IndexPage.class);
 		indexPage.clickFreezerApp();
-		assertEquals(driver.getCurrentUrl(),Constants.ip+"/FreezerApplication/index.html");
+		assertEquals(driver.getCurrentUrl(),Constants.ip+"/index.html");
 		indexPage.clickHome();
-		assertEquals(driver.getCurrentUrl(),Constants.ip+"FreezerApplication/index.html");
+		assertEquals(driver.getCurrentUrl(),Constants.ip+"/index.html");
 		indexPage.clickGitHub();
 		assertEquals(driver.getCurrentUrl(),"https://github.com/RebekahZoe/FreezerApplication");
-		this.driver.get(Constants.ip+"/FreezerApplication/");
+		this.driver.get(Constants.ip);
 		indexPage.clickFreezers();
-		assertEquals(driver.getCurrentUrl(),Constants.ip+"/FreezerApplication/Freezer.html");
+		assertEquals(driver.getCurrentUrl(),Constants.ip+"/Freezer.html");
 		
 		FreezerPage freezerPage = PageFactory.initElements(driver, FreezerPage.class);
 		freezerPage.clickFreezerApp();
-		assertEquals(driver.getCurrentUrl(),Constants.ip+"/FreezerApplication/index.html");
-		this.driver.get(Constants.ip+"/FreezerApplication/Freezer.html");
+		assertEquals(driver.getCurrentUrl(),Constants.ip+"/index.html");
+		this.driver.get(Constants.ip+"/Freezer.html");
 		freezerPage.clickHome();
-		assertEquals(driver.getCurrentUrl(),"/FreezerApplication/index.html");
-		this.driver.get(Constants.ip+"/FreezerApplication/Freezer.html");
+		assertEquals(driver.getCurrentUrl(),"/index.html");
+		this.driver.get(Constants.ip+"/Freezer.html");
 		freezerPage.clickGitHub();
 		assertEquals(driver.getCurrentUrl(),"https://github.com/RebekahZoe/FreezerApplication");
-		this.driver.get(Constants.ip+"/FreezerApplication/Freezer.html");
+		this.driver.get(Constants.ip+"Freezer.html");
 		freezerPage.clickFreezers();
-		assertEquals(driver.getCurrentUrl(),"Constants.ip+/FreezerApplication/Freezer.html");
+		assertEquals(driver.getCurrentUrl(),Constants.ip+"/Freezer.html");
 		
 		IndividualFreezerPage individualFreezerPage = PageFactory.initElements(driver, IndividualFreezerPage.class);
 		individualFreezerPage.clickFreezerApp();
-		assertEquals(driver.getCurrentUrl(),Constants.ip+"/FreezerApplication/index.html");
-		this.driver.get(Constants.ip+"/FreezerApplication/IndividualFreezer.html");
+		assertEquals(driver.getCurrentUrl(),Constants.ip+"/index.html");
+		this.driver.get(Constants.ip+"/IndividualFreezer.html");
 		individualFreezerPage.clickHome();
-		assertEquals(driver.getCurrentUrl(),"/FreezerApplication/index.html");
-		this.driver.get(Constants.ip+"/FreezerApplication/IndividualFreezer.html");
+		assertEquals(driver.getCurrentUrl(),"/index.html");
+		this.driver.get(Constants.ip+"/IndividualFreezer.html");
 		individualFreezerPage.clickGitHub();
 		assertEquals(driver.getCurrentUrl(),"https://github.com/RebekahZoe/FreezerApplication");
-		this.driver.get(Constants.ip+"/FreezerApplication/IndividualFreezer.html");
+		this.driver.get(Constants.ip+"/IndividualFreezer.html");
 		individualFreezerPage.clickFreezers();
-		assertEquals(driver.getCurrentUrl(),Constants.ip+"/FreezerApplication/Freezer.html");
+		assertEquals(driver.getCurrentUrl(),Constants.ip+"/Freezer.html");
 		
 	}
 	
